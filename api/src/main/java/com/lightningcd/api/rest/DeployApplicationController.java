@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
 
+import static org.springframework.web.bind.annotation.RequestMethod.DELETE;
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
 import static org.springframework.web.bind.annotation.RequestMethod.POST;
 
@@ -60,7 +61,7 @@ public class DeployApplicationController {
         }
     }
 
-    @RequestMapping(value = "/deleteApplication", method = GET, produces = JSON)
+    @RequestMapping(value = "/deleteApplication", method = DELETE, produces = JSON)
     public ResponseEntity<String> deleteApplication(@Valid String applicationName) {
         return ResponseEntity.status(HttpStatus.OK).body(deployApplicationService.delete(applicationName));
     }

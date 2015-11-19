@@ -64,14 +64,13 @@ public class DeployApplicationServiceImpl implements DeployApplicationService {
      */
     @Override
     public String create(String applicationName, Environment[] environments, Component[] components, String provisioningTypes) {
-        DeployApplication deployApplication = new DeployApplication(applicationName,environments,components,provisioningTypes);
+        DeployApplication deployApplication = new DeployApplication(applicationName, environments, components, provisioningTypes);
         deployApplicationRepository.save(deployApplication);
         return deployApplication.getApplicationName();
     }
 
     /**
      * Updates an existing deployapplication instance.
-     *
      *
      * @return updated deployApplication instance
      */

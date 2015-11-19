@@ -5,7 +5,6 @@
        src="https://scan.coverity.com/projects/6926/badge.svg"/>
 </a>
 [![Build Status](https://travis-ci.org/amitmawkin/lcd.svg?branch=master)](https://travis-ci.org/amitmawkin/lcd)
-
 [![Codacy Badge](https://api.codacy.com/project/badge/grade/a1033ac271fc4907b4e90be6aa13f36c)](https://www.codacy.com/app/amit-mawkin/lcd)
 
 

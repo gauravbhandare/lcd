@@ -20,6 +20,7 @@ import org.springframework.web.context.WebApplicationContext;
 import java.net.URL;
 import java.nio.charset.Charset;
 
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
@@ -59,10 +60,10 @@ public class ProvisioningConfControllerTest {
         applicationName = "abcdApplication";
         ProvisionEnv provisionEnv1 = new ProvisionEnv();
         provisionEnv1.setEnvironmentName("Dev");
-        provisionEnv1.setRestEndPoint(new URL("http://qaendpoint.com"));
+        provisionEnv1.setRestEndPoint("http://qaendpoint.com");
         ProvisionEnv provisionEnv2 = new ProvisionEnv();
         provisionEnv2.setEnvironmentName("Prod");
-        provisionEnv2.setRestEndPoint(new URL("http://prodendpoint.com"));
+        provisionEnv2.setRestEndPoint("http://prodendpoint.com");
         ProvisionEnv[] myprovisionEnv = {provisionEnv1, provisionEnv2};
         provisioningConf = new ProvisioningConf(applicationName, myprovisionEnv);
         this.mockMvc = webAppContextSetup(webApplicationContext).build();
@@ -95,10 +96,10 @@ public class ProvisioningConfControllerTest {
     public void test3updateProvisioningConf() throws Exception {
         ProvisionEnv provisionEnv1 = new ProvisionEnv();
         provisionEnv1.setEnvironmentName("Dev");
-        provisionEnv1.setRestEndPoint(new URL("http://devendpoint.com"));
+        provisionEnv1.setRestEndPoint("http://devendpoint.com");
         ProvisionEnv provisionEnv2 = new ProvisionEnv();
         provisionEnv2.setEnvironmentName("Prod");
-        provisionEnv2.setRestEndPoint(new URL("http://prodendpoint.com"));
+        provisionEnv2.setRestEndPoint("http://prodendpoint.com");
         ProvisionEnv[] myprovisionEnv = {provisionEnv1, provisionEnv2};
         provisioningConf.setRestEndPoint(myprovisionEnv);
         String jsonString = getJSON(provisioningConf);
@@ -112,7 +113,7 @@ public class ProvisioningConfControllerTest {
 
     @Test
     public void test4deleteProvisioningConf() throws Exception {
-        mockMvc.perform(get("/deleteProvisioningConf")
+        mockMvc.perform(delete("/deleteProvisioningConf")
                 .param("applicationName", "abcdApplication"))
                 .andExpect(status().isOk())
                 .andExpect(content().string("abcdApplication"));

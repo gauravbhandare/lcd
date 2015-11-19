@@ -8,7 +8,6 @@ public class Environment {
      */
 
 
-
     private String environmentName;
 
     public String getEnvironmentName() {

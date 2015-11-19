@@ -94,6 +94,7 @@ public class ProvisioningConfServiceImpl implements ProvisioningConfService {
     @Override
     public String delete(String applicationName) {
         ProvisioningConf provisioningConf = provisioningConfRepository.findByApplicationName(applicationName);
+        provisioningConfRepository.delete(provisioningConf);
         return provisioningConf.getApplicationName();
     }
 }

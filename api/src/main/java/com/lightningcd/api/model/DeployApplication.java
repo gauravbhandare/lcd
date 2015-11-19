@@ -1,12 +1,10 @@
 package com.lightningcd.api.model;
 
 
-import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.annotation.Id;
 
-@Document(collection="deployapplication")
+@Document(collection = "deployapplication")
 public class DeployApplication extends BaseModel {
 
     /**
@@ -22,15 +20,14 @@ public class DeployApplication extends BaseModel {
     private String provisioningTypes;
 
 
-    public DeployApplication(String applicationName, Environment[] environments,Component[] component,String provisioningTypes)
-    {
-        this.applicationName=applicationName;
-        this.environments=environments;
-        this.component=component;
-        this.provisioningTypes=provisioningTypes;
+    public DeployApplication(String applicationName, Environment[] environments, Component[] component, String provisioningTypes) {
+        this.applicationName = applicationName;
+        this.environments = environments;
+        this.component = component;
+        this.provisioningTypes = provisioningTypes;
     }
-    public DeployApplication()
-    {
+
+    public DeployApplication() {
         // default constructor
     }
 

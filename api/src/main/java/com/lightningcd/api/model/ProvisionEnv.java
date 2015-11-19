@@ -12,7 +12,7 @@ import java.net.URL;
 public class ProvisionEnv {
 
     private String environmentName;
-    private URL restEndPoint;
+    private String restEndPoint;
 
 
     public String getEnvironmentName() {
@@ -23,11 +23,11 @@ public class ProvisionEnv {
         this.environmentName = environmentName;
     }
 
-    public URL getRestEndPoint() {
+    public String getRestEndPoint() {
         return restEndPoint;
     }
 
-    public void setRestEndPoint(URL restEndPoint) {
+    public void setRestEndPoint(String restEndPoint) {
         this.restEndPoint = restEndPoint;
     }
 }

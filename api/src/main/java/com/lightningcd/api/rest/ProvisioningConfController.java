@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
 
+import static org.springframework.web.bind.annotation.RequestMethod.DELETE;
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
 import static org.springframework.web.bind.annotation.RequestMethod.POST;
 
@@ -54,7 +55,7 @@ public class ProvisioningConfController {
         }
     }
 
-    @RequestMapping(value = "/deleteProvisioningConf", method = GET, produces = JSON)
+    @RequestMapping(value = "/deleteProvisioningConf", method = DELETE, produces = JSON)
     @ApiOperation(value = "Delete Provisioning Configuration", nickname = "DeleteProvisioningConf", response = String.class)
     public ResponseEntity<String> deleteApplication(@Valid String applicationName) {
         return ResponseEntity.status(HttpStatus.OK).body(provisioiningConfService.delete(applicationName));

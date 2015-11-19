@@ -1,11 +1,9 @@
 package com.lightningcd.api.request;
 
-import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;
 import com.lightningcd.api.model.ProvisionEnv;
 import com.lightningcd.api.model.ProvisioningConf;
 
 import javax.validation.constraints.NotNull;
-import java.net.URL;
 
 public class ProvisioningConfRequest {
 

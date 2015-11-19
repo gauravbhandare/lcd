@@ -54,7 +54,7 @@ public class DeployApplicationRequest {
     }
 
     public DeployApplication toDeployApplication() {
-        return new DeployApplication(applicationName,environments,component,provisioningTypes);
+        return new DeployApplication(applicationName, environments, component, provisioningTypes);
     }
 
     public DeployApplication copyTo(DeployApplication deployApplication) {
