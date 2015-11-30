@@ -1,8 +1,6 @@
 package com.lightningcd.api.model;
 
 
-import java.net.URL;
-
 /**
  * This class will serve as a model for holding endpoints for
  * provisioning environments, idea being an application can have

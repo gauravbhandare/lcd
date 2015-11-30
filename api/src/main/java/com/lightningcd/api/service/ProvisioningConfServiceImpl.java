@@ -5,8 +5,6 @@ import com.lightningcd.api.exception.ConfigurationNotFoundException;
 import com.lightningcd.api.model.ProvisioningConf;
 import com.lightningcd.api.repository.ProvisioningConfRepository;
 import org.bson.types.ObjectId;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,7 +12,6 @@ import org.springframework.stereotype.Service;
 public class ProvisioningConfServiceImpl implements ProvisioningConfService {
 
 
-    private static final Logger logger = LoggerFactory.getLogger(DeployApplicationServiceImpl.class);
     private final ProvisioningConfRepository provisioningConfRepository;
 
     @Autowired

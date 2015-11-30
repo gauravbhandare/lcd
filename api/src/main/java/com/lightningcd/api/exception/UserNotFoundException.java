@@ -1,13 +1,13 @@
 package com.lightningcd.api.exception;
 
 
-public class ConfigurationNotFoundException extends Exception {
+public class UserNotFoundException extends Exception {
     /**
      * Constructs a new exception with {@code null} as its detail message.
      * The cause is not initialized, and may subsequently be initialized by a
      * call to {@link #initCause}.
      */
-    public ConfigurationNotFoundException() {
+    public UserNotFoundException() {
         super();
     }
 
@@ -19,7 +19,7 @@ public class ConfigurationNotFoundException extends Exception {
      * @param message the detail message. The detail message is saved for
      *                later retrieval by the {@link #getMessage()} method.
      */
-    public ConfigurationNotFoundException(String message) {
+    public UserNotFoundException(String message) {
         super(message);
     }
 
@@ -37,7 +37,7 @@ public class ConfigurationNotFoundException extends Exception {
      *                unknown.)
      * @since 1.4
      */
-    public ConfigurationNotFoundException(String message, Throwable cause) {
+    public UserNotFoundException(String message, Throwable cause) {
         super(message, cause);
     }
 
@@ -55,7 +55,7 @@ public class ConfigurationNotFoundException extends Exception {
      *              unknown.)
      * @since 1.4
      */
-    public ConfigurationNotFoundException(Throwable cause) {
+    public UserNotFoundException(Throwable cause) {
         super(cause);
     }
 
@@ -73,7 +73,7 @@ public class ConfigurationNotFoundException extends Exception {
      *                           be writable
      * @since 1.7
      */
-    protected ConfigurationNotFoundException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
+    protected UserNotFoundException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
         super(message, cause, enableSuppression, writableStackTrace);
     }
 }
